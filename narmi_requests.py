@@ -10,8 +10,8 @@ load_dotenv()
 
 TOKEN = os.environ.get("NARMI_TOKEN", "OOPS")
 SECRET = os.environ.get("NARMI_SECRET", "OOPS")
-HOST = os.environ.get("NARMI_HOST", "https://api.demo.narmitech.com/v1")
-ACCOUNTS_URL = os.path.join(HOST, "accounts")
+HOST = os.environ.get("NARMI_HOST", "https://api.guasfcu.com/v1")
+ACCOUNTS_URL = os.path.join(HOST, "accounts/")
 
 date = os.environ.get("NARMI_DATE", datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")) #> "2019-04-09T17:02:26Z"
 sig = os.environ.get("NARMI_SIG", "OOPS")
