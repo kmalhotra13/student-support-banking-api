@@ -32,7 +32,7 @@ if __name__ == "__main__":
     #date, date_err = system_command("date -u +'%Y-%m-%dT%H:%M:%SZ'")
     #date = parsed_output(date)
     date = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
-    sig_command = f'echo -n "date: {date}" | openssl dgst -sha256 -binary -hmac "{SECRET}" | base64'
+    sig_command = f'`echo -n "date: {date}" | openssl dgst -sha256 -binary -hmac "$secret" | base64`'
     #sig, sig_err = system_command(sig_command)
     sig = os.system(sig_command)
 
